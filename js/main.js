@@ -18,6 +18,8 @@ console.clear();
     'img/riku12.JPG',
   ];
 
+  const rholiday = [206,524,]
+
   const pholiday = [101,303,505,707,1224,1225,]
 
   const jholiday = [20200101,20200113,20200211,20200223,20200224,20200320,20200429,20200503,20200504,20200505,20200506,20200723,20200724,20200810,20200921,20200922,20201103,20201123,20210101,20210111,20210211,20210223,20210320,20210429,20210503,20210504,20210505,20210722,20210723,20210808,20210809,20210920,20210923,20211103,20211123,20220101,20220110,20220211,20220223,20220321,20220429,20220503,20220504,20220505,20220718,20220811,20220919,20220923,20221010,20221103,20221123,20230101,20230102,20230109,20230211,20230223,20230321,20230429,20230503,20230504,20230505,20230717,20230811,20230918,20230923,20231009,20231103,20231123,];
@@ -45,6 +47,7 @@ console.clear();
         isHday: false,
         isJday: false,
         isPday: false,
+        isRday: false,
       });
     }
 
@@ -61,6 +64,7 @@ console.clear();
       let ci = 0;
       let cj = 0;
       let ck = 0;
+      let cr = 0;
 
       for (let j = 0; j <= holiday.length; j++) {
         if (holich === holiday[j]) { ci = 1;}
@@ -74,6 +78,10 @@ console.clear();
         if (holich === pholiday[j] + year * 10000) { ck = 1;}
       } 
 
+      for (let j = 0; j <= rholiday.length; j++) {
+        if (holich === rholiday[j] + year * 10000) { cr = 1;}
+      } 
+
       if (ci === 1) {
         dates.push({
           date: i,
@@ -82,6 +90,7 @@ console.clear();
           isHday: true,
           isJday: false,
           isPday: false,
+          isRday: false,
         });
       } else {
         dates.push({
@@ -91,6 +100,7 @@ console.clear();
           isHday: false,
           isJday: false,
           isPday: false,
+          isRday: false,
         });
       }
 
@@ -100,6 +110,10 @@ console.clear();
 
       if (ck === 1) {
         dates[i-1].isPday = true;
+      }
+
+      if (cr === 1) {
+        dates[i-1].isRday = true;
       }
     
     }
@@ -123,6 +137,7 @@ console.clear();
         isHday: false,
         isJday: false,
         isPday: false,
+        isRday: false,
       });
     }
 
@@ -144,6 +159,7 @@ console.clear();
         isHday: false,
         isJday: false,
         isPday: false,
+        isRday: false,
       });
     }
 
@@ -161,7 +177,6 @@ console.clear();
   function renderTitle() {
     const title = `${year}/${String(month + 1).padStart(2, '0')}`;
     document.getElementById('title').textContent = title;
-
   }
 
   function renderWeeks() {
@@ -198,6 +213,9 @@ console.clear();
         }
         if (date.isPday) {
           td.classList.add('phday');
+        }
+        if (date.isRday) {
+          td.classList.add('rhday');
         }
         tr.appendChild(td);
       });

@@ -65,6 +65,10 @@ td.jhday {
   border-radius: 30px;
 }
 
+td.rhday::after {
+  content: '*';
+}
+
 #prev,
 #next,
 #today {
