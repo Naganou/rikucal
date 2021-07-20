@@ -71,7 +71,8 @@ td.rhday::after {
 
 #prev,
 #next,
-#today {
+#today,
+#nextpic {
   cursor: pointer;
   user-select: none;
 }
