@@ -30,7 +30,7 @@ console.clear();
   const today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth();
-  let picIndex = -1;
+  let picIndex = 0;
 
   function getCalendarHead() {
     const dates = [];
@@ -122,7 +122,7 @@ console.clear();
     if (year === today.getFullYear() && month === today.getMonth()) {
       dates[today.getDate() - 1].isToday = true;
     }
-    picIndex = -1;
+    picIndex = 0;
     return dates;
   }
 
@@ -259,12 +259,12 @@ console.clear();
   });
 
   document.getElementById('nextpic').addEventListener('click', () => {
-    picIndex++;
     if (picIndex >= images.length) {
       picIndex = 0;
     }
     const mainImage = document.getElementById('main');
     mainImage.src = images[picIndex];
+    picIndex ++;
     return
   });
 
