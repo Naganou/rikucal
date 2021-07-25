@@ -83,7 +83,6 @@ td.jhday::after {
 #next:hover,
 #today:hover,
 #nextpic:hover {
-  color:chocolate;
   opacity: 0.7;
 }
 
