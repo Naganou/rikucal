@@ -74,8 +74,17 @@ td.jhday::after {
 #today,
 #nextpic {
   cursor: pointer;
-  -webkit-user-select: none;
+  user-select: none;
 }
+
+#prev:hover,
+#next:hover,
+#today:hover,
+#nextpic:hover {
+  color:chocolate;
+}
+
+
 
 #main {
   margin-top: 0px;
