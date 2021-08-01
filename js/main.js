@@ -16,6 +16,18 @@ console.clear();
     'img/riku10.JPG',
     'img/riku11.JPG',
     'img/riku12.JPG',
+    'img/riku13.JPG',
+    'img/riku14.JPG',
+    'img/riku15.JPG',
+    'img/riku16.JPG',
+    'img/riku17.JPG',
+    'img/riku18.JPG',
+    'img/riku19.JPG',
+    'img/riku20.JPG',
+    'img/riku21.JPG',
+    'img/riku22.JPG',
+    'img/riku23.JPG',
+    'img/riku24.JPG',
   ];
 
   const rholiday = [206,524,]
@@ -138,7 +150,6 @@ console.clear();
       });
     }
 
-    
     let currentIndex = month;
     const mainImage = document.getElementById('main');
     mainImage.src = images[currentIndex];
