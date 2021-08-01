@@ -150,7 +150,7 @@ console.clear();
       });
     }
 
-    let currentIndex = month;
+    let currentIndex = month + (year % 2) * 12;
     const mainImage = document.getElementById('main');
     mainImage.src = images[currentIndex];
 
