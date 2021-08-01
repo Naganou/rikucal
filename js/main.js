@@ -264,6 +264,29 @@ console.clear();
     return;
   });
 
+  let timeoutId;
+
+  function playSlideshow() {
+    timeoutId = setTimeout(() => {
+      nextpic.click();
+      playSlideshow();
+    }, 1000);
+  }
+
+  let isPlaying = false;
+
+  const play = document.getElementById('play');
+  play.addEventListener('click', () => {
+    if (isPlaying === false) {
+      playSlideshow();
+      play.textContent = 'pause';
+    } else {
+      clearTimeout(timeoutId);
+      play.textContent = 'play';
+    }
+    isPlaying = !isPlaying;
+  });
+
   createCalendar();
 
 }

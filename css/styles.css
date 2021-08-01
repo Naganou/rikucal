@@ -72,21 +72,12 @@ td.jhday::after {
 #prev,
 #next,
 #today,
-#nextpic {
-  color: #8b4d06;
-  opacity: 1;
+#nextpic,
+#play {
+  font-size: 28px;
   cursor: pointer;
   user-select: none;
 }
-
-#prev:hover,
-#next:hover,
-#today:hover,
-#nextpic:hover {
-  opacity: 0.7;
-}
-
-
 
 #main {
   margin-top: 0px;
