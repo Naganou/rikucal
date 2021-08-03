@@ -276,11 +276,19 @@ console.clear();
   });
 
   let timeoutId;
+  let timeoutCt = 0;
 
   function playSlideshow() {
     timeoutId = setTimeout(() => {
+      timeoutCt ++;
       nextpic.click();
-      playSlideshow();
+      if (timeoutCt < images.length) {
+        playSlideshow();
+      } else {
+        play.textContent = 'play';
+        isPlaying = false;
+        timeoutCt = 0;
+      }
     }, 1000);
   }
 
@@ -291,9 +299,10 @@ console.clear();
     if (isPlaying === false) {
       playSlideshow();
       play.textContent = 'pause';
-    } else {
+    } else  {
       clearTimeout(timeoutId);
       play.textContent = 'play';
+      timeoutCt = 0;    
     }
     isPlaying = !isPlaying;
   });
