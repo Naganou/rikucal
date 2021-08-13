@@ -30,9 +30,9 @@ td {
   text-align: center;
 }
 
-th {
+/* th {
   line-height: 28px;
-}
+} */
 
 #caltex td:first-child {
   background:pink;
