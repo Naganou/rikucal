@@ -41,7 +41,6 @@ console.clear();
   const today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth();
-  let picIndex = 0;
 
   function getCalendarHead() {
     const dates = [];
@@ -130,7 +129,6 @@ console.clear();
     if (year === today.getFullYear() && month === today.getMonth()) {
       dates[today.getDate() - 1].isToday = true;
     }
-    picIndex = 0;
     return dates;
   }
 
@@ -265,6 +263,8 @@ console.clear();
     createCalendar();
   });
 
+  let picIndex = 0;
+
   document.getElementById('nextpic').addEventListener('click', () => {
     if (picIndex >= images.length) {
       picIndex = 0;
@@ -272,7 +272,6 @@ console.clear();
     const mainImage = document.getElementById('main');
     mainImage.src = images[picIndex];
     picIndex ++;
-    return;
   });
 
   let timeoutId;
@@ -290,6 +289,7 @@ console.clear();
         timeoutCt = 0;
       }
     }, 1000);
+    return;
   }
 
   let isPlaying = false;
@@ -297,12 +297,11 @@ console.clear();
   const play = document.getElementById('play');
   play.addEventListener('click', () => {
     if (isPlaying === false) {
-      playSlideshow();
       play.textContent = 'pause';
+      playSlideshow();
     } else  {
       clearTimeout(timeoutId);
-      play.textContent = 'play';
-      timeoutCt = 0;    
+      play.textContent = 'play';  
     }
     isPlaying = !isPlaying;
   });
