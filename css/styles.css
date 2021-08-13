@@ -19,9 +19,9 @@ table {
   .photo {margin-left:0;}
 }
 
-thead,
-tfoot {
+thead {
   background: #eee;
+  padding: 0px;
 }
 
 th,
@@ -37,10 +37,6 @@ td {
 
 #caltex td:last-child {
   background: rgb(173, 222, 245);
-}
-
-tfoot {
-  font-weight: bold;
 }
 
 td.disabled {
@@ -84,5 +80,5 @@ td.jhday::after {
 #main {
   margin-top: 0px;
   width: 820px;
-  height: 580px;
+  height: 570px;
 }
