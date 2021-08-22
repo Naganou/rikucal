@@ -48,6 +48,7 @@ td.disabled {
 
 td.today {
   font-style:italic;
+  text-decoration: underline orange 12px;
 }
 
 td.hday {
