@@ -287,6 +287,7 @@ console.clear();
         play.textContent = 'play';
         isPlaying = false;
         timeoutCt = 0;
+        alert('The slideshow is over!');
       }
     }, 1000);
     return;
