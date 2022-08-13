@@ -51,7 +51,7 @@ td.today {
 }
 
 td.hday {
-  color: orangered;
+  color: green;
 }
 
 td.phday {
@@ -60,7 +60,7 @@ td.phday {
 }
 
 td.rhday {
-  background:rgb(197, 245, 238); 
+  background:rgb(197, 245, 238);
   opacity: 0.7;
   border-radius: 30px;
 }
