@@ -297,7 +297,7 @@ console.clear();
   const play = document.getElementById('play');
   play.addEventListener('click', () => {
     if (isPlaying === false) {
-      play.textContent = 'pause';
+      play.textContent = 'stop';
       playSlideshow();
     } else  {
       clearTimeout(timeoutId);
