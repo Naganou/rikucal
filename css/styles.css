@@ -10,6 +10,8 @@ table {
   border-collapse: collapse;
   border: 2px solid #eee;
   margin: 0 auto;
+  /* background-color: .paqua; */
+  padding: 0px;
 }
 
 @media (min-width: 1300px) {
@@ -24,9 +26,17 @@ thead {
   background: #eee;
 }
 
-th,
-td {
+th {
   padding: 15px;
+  text-align: center;
+}
+
+.calen td {
+  padding: 15px;
+  text-align: center;
+}
+
+.photo td {
   text-align: center;
 }
 
@@ -81,7 +91,9 @@ td.jhday::after {
 
 #main {
   margin-top: 0px;
-  width: 820px;
-  height: 615px;
+  /* height: 615px;
+  width: 820px; */
+  height: 612px;
+  width: 815px;
   vertical-align: bottom;
 }
