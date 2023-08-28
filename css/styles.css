@@ -59,10 +59,6 @@ td.today {
   font-style:italic;
 }
 
-td.today::before {
-  content: '!';
-}
-
 td.hday {
   color: green;
 }
