@@ -57,6 +57,7 @@ td.disabled {
 
 td.today {
   font-style:italic;
+  text-decoration: underline;
 }
 
 td.hday {
@@ -90,7 +91,7 @@ td.jhday::after {
 
 #main {
   margin-top: 0px;
-  height: 612px;
   width: 815px;
+  height: 614px;
   vertical-align: bottom;
 }
