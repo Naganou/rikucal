@@ -3,14 +3,13 @@ body {
   font-size: 48px;
   font-weight: bold;
   line-height: 48px;
-  background-color:rgb(213, 204, 70);
+  background-color: lightcyan;
 }
 
 table {
   border-collapse: collapse;
   border: 2px solid #eee;
   margin: 0 auto;
-  /* background-color: .paqua; */
   padding: 0px;
 }
 
@@ -60,17 +59,21 @@ td.today {
   font-style:italic;
 }
 
+td.today::before {
+  content: '!';
+}
+
 td.hday {
   color: green;
 }
 
 td.phday {
   border-style: solid;
-  border-color: rgb(71, 255, 154);
+  border-color:blue;
 }
 
 td.rhday {
-  background:rgb(197, 245, 238);
+  background: hotpink;
   opacity: 0.7;
   border-radius: 30px;
 }
@@ -91,8 +94,6 @@ td.jhday::after {
 
 #main {
   margin-top: 0px;
-  /* height: 615px;
-  width: 820px; */
   height: 612px;
   width: 815px;
   vertical-align: bottom;
