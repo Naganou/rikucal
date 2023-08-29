@@ -7,13 +7,11 @@ body {
 }
 
 table {
-  border-collapse: collapse;
-  border: 2px solid #eee;
   margin: 0 auto;
-  padding: 0px;
+  border-collapse: collapse;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1200px) {
   #contents {
     display: flex;
   }
@@ -91,7 +89,7 @@ td.jhday::after {
 
 #main {
   margin-top: 0px;
-  width: 815px;
-  height: 614px;
+  width: 814px;
+  height: 680px;
   vertical-align: bottom;
 }
