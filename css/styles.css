@@ -11,27 +11,12 @@ table {
   border-collapse: collapse;
 }
 
-.photo {
-  text-align: center;
-}
-
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   #contents {
     display: flex;
-    flex: 1;
   }
-
-  .calen {
-    margin-right:0;
-    width: 30%;
-    height: auto;
-  } 
-
-  .photo {
-    text-align: left;
-    width: 60%;
-    height: auto;
-  }
+  .calen {margin-right:0;}
+  .photo {margin-left:0;}
 }
 
 thead {
@@ -39,12 +24,12 @@ thead {
 }
 
 th {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
 .calen td {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -53,7 +38,7 @@ th {
 }
 
 th {
-  line-height: 24px;
+  line-height: 28px;
 }
 
 #caltex td:first-child {
@@ -104,7 +89,7 @@ td.jhday::after {
 
 #main {
   margin-top: 0px;
-  width: 750px;
-  height: 670px;
+  width: 814px;
+  height: 680px;
   vertical-align: bottom;
 }
