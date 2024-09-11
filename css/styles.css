@@ -24,6 +24,15 @@ table {
   .photo {
     margin-left: 0;
   }
+
+  #main {
+    margin-top: 0px;
+    /* width: 815px;
+    height: 614px; */
+    width: 830px;
+    height: 724px;
+    vertical-align: bottom;
+  }
 }
 
 thead {
@@ -117,9 +126,9 @@ td.jhday::after {
 
 #main {
   margin-top: 0px;
-  /* width: 815px;
-  height: 614px; */
   width: 830px;
   height: 724px;
+  /* width: 830px;
+  height: 724px; */
   vertical-align: bottom;
 }
