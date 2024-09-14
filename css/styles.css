@@ -2,8 +2,7 @@ body {
   font-family: 'Courier New', monospace;
   font-size: 48px;
   font-weight: bold;
-  line-height: 48px;
-  background-color:aqua;
+  background-color: aqua;
 }
 
 table {
@@ -13,25 +12,28 @@ table {
   padding: 0px;
 }
 
-@media (min-width: 1300px) {
-  #contents {
-    display: flex;
-  }
-  .calen {margin-right:0;}
-  .photo {margin-left:0;}
+
+#main {
+    margin-top: 0px;
+    width: 830px;
+    height: 760px;
+    vertical-align: bottom;
+    object-fit: cover;
 }
+
 
 thead {
   background: #eee;
+  line-height: 24px;
 }
 
 th {
-  padding: 15px;
+  padding: 16px;
   text-align: center;
 }
 
 .calen td {
-  padding: 15px;
+  padding: 8px;
   text-align: center;
 }
 
@@ -39,40 +41,63 @@ th {
   text-align: center;
 }
 
-th {
-  line-height: 28px;
+
+
+td.snday {
+  background: pink;
 }
 
-#caltex td:first-child {
-  background:pink;
+td.stday {
+  background: skyblue;
 }
 
-#caltex td:last-child {
-  background: rgb(173, 222, 245);
+#caltex tr:first-child {
+  line-height: 12px;
+  font-size: 10px;
+  background: aqua;
+  color:aqua;
+  /* background:fuchsia; */
+}
+
+#caltex tr:nth-child(even) {
+  line-height: 12px;
+  font-size: 10px;
+  padding: 0px;
+  margin: 0px;
+  color: blue;
 }
 
 td.disabled {
   opacity: 0.2;
 }
 
+td.njhday {
+  opacity: 0;
+}
+
 td.today {
-  font-style:italic;
+  font-style: italic;
   text-decoration: underline;
 }
 
-td.hday {
+td.wday {
   color: green;
 }
 
 td.phday {
   border-style: solid;
-  border-color:blue;
+  border-width: thin;
+  border-color: blue;
 }
 
 td.rhday {
   background: hotpink;
   opacity: 0.7;
   border-radius: 30px;
+}
+
+tr.commentLine {
+  padding: 0px;
 }
 
 td.jhday::after {
@@ -84,14 +109,22 @@ td.jhday::after {
 #today,
 #nextpic,
 #play {
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
   user-select: none;
 }
 
-#main {
-  margin-top: 0px;
-  width: 815px;
-  height: 614px;
-  vertical-align: bottom;
+@media (min-width: 1300px) {
+  #contents {
+    display: flex;
+  }
+
+  .calen {
+    margin-right: 0;
+  }
+
+  .photo {
+    margin-left: 0;
+  }
+
 }
