@@ -18,7 +18,7 @@ table {
     display: flex;
   }
   .calen {margin-right:0;}
-  .photo {margin-left:0;}
+  .photo {margin-left:0; opacity:0;} 
 }
 
 thead {
@@ -90,6 +90,7 @@ td.jhday::after {
 }
 
 #main {
+  opacity: 0;
   margin-top: 0px;
   width: 815px;
   height: 614px;
