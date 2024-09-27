@@ -3,32 +3,32 @@
 console.clear();
 
 {
-  const images = [
-    'img/riku01.JPG',
-    'img/riku02.JPG',
-    'img/riku03.JPG',
-    'img/riku04.JPG',
-    'img/riku05.JPG',
-    'img/riku06.JPG',
-    'img/riku07.JPG',
-    'img/riku08.JPG',
-    'img/riku09.JPG',
-    'img/riku10.JPG',
-    'img/riku11.JPG',
-    'img/riku12.JPG',
-    'img/riku13.JPG',
-    'img/riku14.JPG',
-    'img/riku15.JPG',
-    'img/riku16.JPG',
-    'img/riku17.JPG',
-    'img/riku18.JPG',
-    'img/riku19.JPG',
-    'img/riku20.JPG',
-    'img/riku21.JPG',
-    'img/riku22.JPG',
-    'img/riku23.JPG',
-    'img/riku24.JPG',
-  ];
+  // const images = [
+  //   'img/riku01.JPG',
+  //   'img/riku02.JPG',
+  //   'img/riku03.JPG',
+  //   'img/riku04.JPG',
+  //   'img/riku05.JPG',
+  //   'img/riku06.JPG',
+  //   'img/riku07.JPG',
+  //   'img/riku08.JPG',
+  //   'img/riku09.JPG',
+  //   'img/riku10.JPG',
+  //   'img/riku11.JPG',
+  //   'img/riku12.JPG',
+  //   'img/riku13.JPG',
+  //   'img/riku14.JPG',
+  //   'img/riku15.JPG',
+  //   'img/riku16.JPG',
+  //   'img/riku17.JPG',
+  //   'img/riku18.JPG',
+  //   'img/riku19.JPG',
+  //   'img/riku20.JPG',
+  //   'img/riku21.JPG',
+  //   'img/riku22.JPG',
+  //   'img/riku23.JPG',
+  //   'img/riku24.JPG',
+  // ];
 
   /* personal anniversary */
   const rholiday = [206,524,]
@@ -153,8 +153,8 @@ console.clear();
     }
 
     let currentIndex = month + (year % 2) * 12;
-    const mainImage = document.getElementById('main');
-    mainImage.src = images[currentIndex];
+    // const mainImage = document.getElementById('main');
+    // mainImage.src = images[currentIndex];
 
     return dates;
   }
@@ -267,48 +267,48 @@ console.clear();
     createCalendar();
   });
 
-  let picIndex = 0;
+  // let picIndex = 0;
 
-  document.getElementById('nextpic').addEventListener('click', () => {
-    if (picIndex >= images.length) {
-      picIndex = 0;
-    }
-    const mainImage = document.getElementById('main');
-    mainImage.src = images[picIndex];
-    picIndex ++;
-  });
+  // document.getElementById('nextpic').addEventListener('click', () => {
+  //   if (picIndex >= images.length) {
+  //     picIndex = 0;
+  //   }
+  //   const mainImage = document.getElementById('main');
+  //   mainImage.src = images[picIndex];
+  //   picIndex ++;
+  // });
 
-  let timeoutId;
-  let timeoutCt = 0;
+  // let timeoutId;
+  // let timeoutCt = 0;
 
-  function playSlideshow() {
-    timeoutId = setTimeout(() => {
-      timeoutCt ++;
-      nextpic.click();
-      if (timeoutCt < images.length) {
-        playSlideshow();
-      } else {
-        play.textContent = 'play';
-        isPlaying = false;
-        timeoutCt = 0;
-      }
-    }, 1000);
-    return;
-  }
+  // function playSlideshow() {
+  //   timeoutId = setTimeout(() => {
+  //     timeoutCt ++;
+  //     nextpic.click();
+  //     if (timeoutCt < images.length) {
+  //       playSlideshow();
+  //     } else {
+  //       play.textContent = 'play';
+  //       isPlaying = false;
+  //       timeoutCt = 0;
+  //     }
+  //   }, 1000);
+  //   return;
+  // }
 
-  let isPlaying = false;
+  // let isPlaying = false;
 
-  const play = document.getElementById('play');
-  play.addEventListener('click', () => {
-    if (isPlaying === false) {
-      play.textContent = 'pause';
-      playSlideshow();
-    } else  {
-      clearTimeout(timeoutId);
-      play.textContent = 'play';
-    }
-    isPlaying = !isPlaying;
-  });
+  // const play = document.getElementById('play');
+  // play.addEventListener('click', () => {
+  //   if (isPlaying === false) {
+  //     play.textContent = 'pause';
+  //     playSlideshow();
+  //   } else  {
+  //     clearTimeout(timeoutId);
+  //     play.textContent = 'play';
+  //   }
+  //   isPlaying = !isPlaying;
+  // });
 
   createCalendar();
 
