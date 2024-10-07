@@ -13,13 +13,13 @@ table {
   padding: 0px;
 }
 
-/* @media (min-width: 1300px) { */
-  /* #contents {
+@media (min-width: 1300px) {
+  #contents {
     display: flex;
-  } */
-  /* .calen {margin-right:0;} */
-  /* .photo {margin-left:0;} */
-/* } */
+  }
+  .calen {margin-right:0;}
+  .photo {margin-left:0;}
+}
 
 thead {
   background: #eee;
@@ -35,9 +35,9 @@ th {
   text-align: center;
 }
 
-/* .photo td {
+.photo td {
   text-align: center;
-} */
+}
 
 th {
   line-height: 28px;
@@ -81,18 +81,17 @@ td.jhday::after {
 
 #prev,
 #next,
-#today
-/* #nextpic, */
-/* #play { */
-{
+#today,
+#nextpic,
+#play {
   font-size: 28px;
   cursor: pointer;
   user-select: none;
 }
 
-/* #main {
+#main {
   margin-top: 0px;
   width: 815px;
   height: 614px;
   vertical-align: bottom;
-} */
+}
